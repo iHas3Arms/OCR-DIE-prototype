@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>OCR Document Indexer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1 class="title">Prototype</h1>
+    </header>
+    <main>
+        <div class="form">
+            <label for="input-file" id="drop-area">
+                <input type="file" accept="application/pdf,image/*" id="input-file" hidden />
+                <div id="img-view">
+                    <img src="icon.png" id="upload-img" alt="" />
+                    <div id="preview"></div>
+                    <p>Drag and drop or click here<br />to upload image.</p>
+                    <span>Upload any images from desktop</span>
+                </div>
+            </label>
+            <p id="status"></p>
+            <button id="upload">Upload document</button>
+        </div>
+    </main>
+    <footer>
+        Footer
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
