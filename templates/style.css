@@ -6,7 +6,6 @@
 
 :root {
     --header-height: 10vh;
-    --footer-height: 2vh;
 }
 
 body * {
@@ -20,7 +19,8 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: red;
-    height: 100vh;
+    min-height: 100vh;
+    height: max-content;
 }
 
 header {
@@ -49,7 +49,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    min-width: 500px;
+    min-width: 380px;
     min-height: 380px;
     width: fit-content;
     height: fit-content;
@@ -105,6 +105,5 @@ input {
 }
 
 footer {
-    height: var(--footer-height);
-    background-color: grey;
+    background-color: black;
 }

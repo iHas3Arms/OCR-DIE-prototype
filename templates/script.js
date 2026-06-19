@@ -60,4 +60,26 @@ uploadBtn.addEventListener("click", async () => {
         return;
     }
 
-})
+    const formData = new FormData();
+    formData.append("file", selectedFile);
+
+    status.textContent = "Uploading...";
+
+    try {
+        const response = await fetch("http://localhost:8000/documents/upload", {
+            method: "POST",
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error("Upload failed");
+        }
+
+        const result = await response.json();
+
+        status.textContent = `Uploaded successfully. Document ID: ${result.document_id}`;
+    } catch (error) {
+        console.error(error);
+        status.textContent = "Upload failed.";
+    }
+});
